@@ -2,12 +2,36 @@
 <html>
 <head>
   <title>EventX</title>
-  <link type="text/css" rel="stylesheet" media="screen" href="{{ STATIC_URL }}css/styles.css" />
+   <link rel="stylesheet" href="{{ STATIC_URL }}css/styles.css" />
 </head>
 <body>
-  <img src="{{ STATIC_URL }}img/logo.png" />
-  <h1>Bem-vindo ao EventX!</h1>
-  <p>O evento mais sensacional do ano depois do Dev in Rio!</p>
 
+  <div class="wrapper">
+
+    <div class="header">
+
+
+      <h1 class="title">
+        Evente<span class="up">X</span>
+      </h1>
+
+      <div class="center">
+
+        <p>O evento mais sensacional do ano depois do Dev in Rio!</p>
+        <p>Você não pode perder esta oportunidade!</p>
+
+        <p class="inscricoes">
+          <span>
+            Abertura das inscrições no próximo domingo.
+          </span>
+        </p>
+        <p class="contato">Para dúvidas e mais informações entre em contato com <a href="mailto:eventex@eventex.com.br">eventex@eventex.com</a></p>
+      </div>
+    </div>
+  </div>
+  <div class="footer">
+    &copy; 2013. Eventex, some rights reserved.
+    <img src="{{ STATIC_URL }}img/django-site.png" alt="">
+  </div>
 </body>
 </html>
