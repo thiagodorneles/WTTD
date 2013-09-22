@@ -1,39 +1,13 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <title>EventX</title>
-   <link rel="stylesheet" href="{{ STATIC_URL }}css/styles.css" />
-</head>
-<body>
+{% extends 'base.html' %}
+{% block content %}
+  <div class="center">
 
-  <div class="wrapper">
+    <p>O evento mais sensacional do ano depois do Dev in Rio!</p>
+    <p>Você não pode perder esta oportunidade!</p>
 
-    <div class="header">
-
-
-      <h1 class="title">
-        Evente<span class="up">X</span>
-      </h1>
-
-      <div class="center">
-
-        <p>O evento mais sensacional do ano depois do Dev in Rio!</p>
-        <p>Você não pode perder esta oportunidade!</p>
-
-        <p class="inscricoes">
-          <span>
-            Abertura das inscrições no próximo domingo.
-          </span>
-        </p>
-        <p class="contato">Para dúvidas e mais informações entre em contato com <a href="mailto:eventex@eventex.com.br">eventex@eventex.com</a></p>
-      </div>
-    </div>
+    <p class="inscricoes">
+      <a href="/inscricao/">Inscreva-se já!</a>
+    </p>
+    <p class="contato">Para dúvidas e mais informações entre em contato com <a href="mailto:eventex@eventex.com.br">eventex@eventex.com</a></p>
   </div>
-  <div class="footer">
-    <div class="content">
-      &copy; 2013. Eventex, some rights reserved.
-      <img src="{{ STATIC_URL }}img/django-site.png" alt="">
-    </div>
-  </div>
-</body>
-</html>
+{% endblock content %}

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>EventX</title>
+   <link rel="stylesheet" href="{{ STATIC_URL }}css/styles.css" />
+</head>
+<body>
+
+  <div class="wrapper">
+
+    <div class="header">
+
+      <h1 class="title">
+        <a href="/">
+          Evente<span class="up">X</span>
+        </a>
+      </h1>
+
+      <div>
+        {% block content %}
+        {% endblock content %}
+      </div>
+    </div>
+  </div>
+  <div class="footer">
+    <div class="content">
+      &copy; 2013. Eventex, some rights reserved.
+      <img src="{{ STATIC_URL }}img/django-site.png" alt="">
+    </div>
+  </div>
+</body>
+</html>
