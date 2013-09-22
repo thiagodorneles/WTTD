@@ -42,6 +42,9 @@ a {
 .title .up {
   color: #f1c40f;
 }
+.title a {
+  text-decoration: none;
+}
 .inscricoes {
   margin: 40px;
 }
@@ -71,4 +74,57 @@ a {
   width: 30px;
   height: 30px;
   margin-top: -5px;
+}
+.form {
+  margin: 0 auto;
+  width: 900px;
+}
+/*form div {
+  display: block;
+  clear: both;
+}*/
+.row {
+  display: block;
+  clear: both;
+  height: 50px;
+}
+label {
+  float: left;
+  text-align: right;
+  width: 150px;
+}
+input {
+  border: 1px solid;
+  font-size: 20px;
+  padding: 5px;
+}
+input[type="text"]{
+  float:left;
+  width: 400px;
+  margin: 0;
+  margin-left: 15px;
+}
+.button {
+  text-align: left;
+}
+.button input {
+  width: 150px;
+  border: none;
+  background: #16a085;
+  margin-left: 15px;
+}
+.button input:hover, .button input:focus {
+  cursor: pointer;
+  background: #1abc9c;
+}
+.errorlist {
+  float: left;
+  margin: 0;
+  padding: 0;
+}
+.errorlist li {
+  list-style-type: none;
+  color: #e74c3c;
+  padding-top: 6px;
+  padding-left: 10px;
 }
