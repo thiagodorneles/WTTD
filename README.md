@@ -1,4 +1,7 @@
 WWTD
 ====
 
-Welcome to the django : Eventex
+Projeto desenvolvido durante o curso Welcome to the django.
+--
+
+## Eventex
