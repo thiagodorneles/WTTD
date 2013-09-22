@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="form">
+  <h2>Preencha o formulário abaixo para realizar a inscrição</h2>
+  <form action="." method="POST">
+    {% csrf_token %}
+    <div class="row">
+      <label for="{{ form.name.id_for_label }}">{{ form.name.label }}:</label>
+      {{ form.name }}
+      {{ form.name.errors }}
+    </div>
+    <div class="row">
+      <label for="{{ form.cpf.id_for_label }}">{{ form.cpf.label }}:</label>
+      {{ form.cpf }}
+      {{ form.cpf.errors }}
+    </div>
+    <div class="row">
+      <label for="{{ form.email.id_for_label  }}">{{ form.email.label }}:</label>
+      {{ form.email }}
+      {{ form.email.errors }}
+    </div>
+    <div class="row">
+      <label for="{{ form.phone.id_for_label }}">{{ form.phone.label }}:</label>
+      {{ form.phone }}
+      {{ form.phone.errors }}
+    </div>
+    <div class="button">
+      <label>&nbsp;</label>
+      <input type="submit" value="Enviar!" />
+    </div>
+  </form>
+</div>
+{% endblock content %}
