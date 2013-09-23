@@ -104,6 +104,12 @@ input[type="text"]{
   margin: 0;
   margin-left: 15px;
 }
+#id_phone_0 {
+    width: 40px;
+}
+#id_phone_1 {
+    width: 334px;
+}
 .button {
   text-align: left;
 }
