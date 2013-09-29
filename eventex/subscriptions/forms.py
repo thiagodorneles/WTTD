@@ -1,9 +1,9 @@
 # coding: utf-8
 from django import forms
+from django.core.validators import EMPTY_VALUES
 from django.utils.translation import ugettext as _
 from django.core.exceptions import ValidationError
 from eventex.subscriptions.models import Subscription
-from django.core.validators import EMPTY_VALUES
 
 def CPFValidator(value):
     if not value.isdigit():
@@ -15,8 +15,7 @@ class PhoneWidget(forms.MultiWidget):
     def __init__(self, attrs=None):
         widgets = (
             forms.TextInput(attrs=attrs),
-            forms.TextInput(attrs=attrs)
-        )
+            forms.TextInput(attrs=attrs))
         super(PhoneWidget, self).__init__(widgets, attrs)
 
     def decompress(self, value):
@@ -27,9 +26,9 @@ class PhoneWidget(forms.MultiWidget):
 class PhoneField(forms.MultiValueField):
     widget = PhoneWidget
 
-    def _init__(self, *args, **kwargs):
+    def __init__(self, *args, **kwargs):
         fields = (forms.IntegerField(), 
-                forms.IntegerField())
+                  forms.IntegerField())
         super(PhoneField, self).__init__(fields, *args, **kwargs)
 
     def compress(self, data_list):

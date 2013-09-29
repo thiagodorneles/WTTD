@@ -4,7 +4,6 @@
   <h2>Preencha o formulário abaixo para realizar a inscrição</h2>
   <form action="." method="POST">
     {% csrf_token %}
-    {{ form.non_field_errors }}
     <div class="row">
       <label for="{{ form.name.id_for_label }}">{{ form.name.label }}:</label>
       {{ form.name }}
@@ -28,6 +27,9 @@
     <div class="button">
       <label>&nbsp;</label>
       <input type="submit" value="Enviar!" />
+      <br>
+      <label>&nbsp;</label>
+      {{ form.non_field_errors }}
     </div>
   </form>
 </div>

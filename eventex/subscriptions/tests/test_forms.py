@@ -24,7 +24,6 @@ class SubscriptionFormTest(TestCase):
     def test_email_is_optional(self):
         'Email is optional'
         form = self.make_validated_form(email='')
-        print form.errors
         self.assertFalse(form.errors)
 
     def test_must_inform_email_or_phone(self):
