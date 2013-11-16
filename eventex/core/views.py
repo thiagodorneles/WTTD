@@ -5,6 +5,8 @@
 # from django.conf import settings
 # from django.template import RequestContext
 from django.shortcuts import render
+from eventex.core.models import Speaker
+from django.shortcuts import get_object_or_404
 
 def homepage(request):
   # 1
@@ -24,3 +26,9 @@ def homepage(request):
   # return render_to_response('index.html', context)
 
   return render(request, 'index.html')
+
+
+def speaker_detail(request, slug):
+  speaker = get_object_or_404(Speaker, slug=slug)
+  context = {'speaker': speaker }
+  return render(request, 'core/speaker_detail.html', context)
