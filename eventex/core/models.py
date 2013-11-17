@@ -46,6 +46,14 @@ class Talk(models.Model):
 
     objects = PeriodManager()
 
+    @property
+    def slides(self):
+        return self.media_set.filter(kind='SL')
+
+    @property
+    def videos(self):
+        return self.media_set.filter(kind='YT')
+
     class Meta:
         verbose_name = _('palestra')
         verbose_name_plural = _('palestras')
@@ -61,3 +69,17 @@ class Course(Talk):
     notes = models.TextField()
 
     objects = PeriodManager()
+
+class Media(models.Model):
+    MEDIAS = (
+        ('YT', _('YouTube')),
+        ('SL', _('SlideShare')),
+    )
+
+    talk = models.ForeignKey('Talk')
+    kind = models.CharField(_('Tipo'), max_length=2, choices=MEDIAS)
+    title = models.CharField(_(u'Título'), max_length=255)
+    media_id = models.CharField(_('Ref'), max_length=255)
+
+    def __unicode__(self):
+        return u'%s - %s' % (self.talk.title, self.title)
